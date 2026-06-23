@@ -1,5 +1,5 @@
 /* ============================================
-   GRILL PARK - Admin Dashboard JavaScript
+   HOUSE OF VENU KRISHNA - Admin Dashboard JavaScript
    ============================================ */
 
 "use strict";
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // SIDEBAR NAV - Active State + Section Switching
   // ============================================
   var sectionTitles = {
-    dashboard: ["Good Evening, Abdul", "Here's what's happening at Grill Park today."],
+    dashboard: ["Good Evening, Abdul", "Here's what's happening at HVK today."],
     orders: ["Order Management", "Track and manage all incoming orders."],
     reservations: ["Reservations", "Manage table bookings and guest schedules."],
     menu: ["Menu Management", "Add, edit, or remove menu items."],
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var actionBtns = document.querySelectorAll(".action-btn");
   function showOrderModal(orderRow) {
     var cells = orderRow.querySelectorAll("td");
-    var orderId = cells[0] ? cells[0].textContent.trim() : "#GP-0000";
+    var orderId = cells[0] ? cells[0].textContent.trim() : "#HVK-0000";
     var customer = cells[1] ? cells[1].textContent.trim() : "Guest";
     var items = cells[2] ? cells[2].textContent.trim() : "Various items";
     var amount = cells[3] ? cells[3].textContent.trim() : "₹0";
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var modal = document.createElement("div");
     modal.style.cssText =
-      "background:#111118;border:1px solid rgba(255,107,0,0.3);border-radius:16px;padding:32px;max-width:480px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.5);animation:scaleIn 0.3s ease";
+      "background:#FAFAF5;border:1px solid rgba(200,168,76,0.3);border-radius:16px;padding:32px;max-width:480px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,0.1);animation:scaleIn 0.3s ease";
 
     var statusColors = {
       Preparing: "#3498DB",
@@ -175,30 +175,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     modal.innerHTML =
       '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">' +
-      '<h3 style="font-family:Playfair Display,serif;font-size:22px;font-weight:700;color:#F5F0E8">Order Details</h3>' +
-      '<button class="modal-close" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);background:none;color:#B8B0A0;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">&times;</button>' +
+      '<h3 style="font-family:Playfair Display,serif;font-size:22px;font-weight:700;color:#2C2C2C">Order Details</h3>' +
+      '<button class="modal-close" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(0,0,0,0.1);background:none;color:#5C5C5C;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center">&times;</button>' +
       "</div>" +
       '<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">' +
-      "<div><span style='color:#6B6560;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Order ID</span><p style='color:#FF6B00;font-weight:700;font-size:16px;margin-top:4px'>" +
+      "<div><span style='color:#5C5C5C;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Order ID</span><p style='color:#C9A84C;font-weight:700;font-size:16px;margin-top:4px'>" +
       orderId +
       "</p></div>" +
-      "<div><span style='color:#6B6560;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Amount</span><p style='color:#FF6B00;font-weight:700;font-size:16px;margin-top:4px'>" +
+      "<div><span style='color:#5C5C5C;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Amount</span><p style='color:#C9A84C;font-weight:700;font-size:16px;margin-top:4px'>" +
       amount +
       "</p></div>" +
-      "<div><span style='color:#6B6560;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Customer</span><p style='color:#F5F0E8;font-weight:600;font-size:14px;margin-top:4px'>" +
+      "<div><span style='color:#5C5C5C;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Customer</span><p style='color:#2C2C2C;font-weight:600;font-size:14px;margin-top:4px'>" +
       customer +
       "</p></div>" +
-      "<div><span style='color:#6B6560;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Status</span><p style='color:" +
-      (statusColors[status] || "#B8B0A0") +
+      "<div><span style='color:#5C5C5C;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Status</span><p style='color:" +
+      (statusColors[status] || "#5C5C5C") +
       ";font-weight:600;font-size:14px;margin-top:4px'>" +
       status +
       "</p></div>" +
       "</div>" +
-      "<div style='margin-bottom:24px'><span style='color:#6B6560;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Items Ordered</span><p style='color:#B8B0A0;font-size:14px;margin-top:4px'>" +
+      "<div style='margin-bottom:24px'><span style='color:#5C5C5C;font-size:12px;text-transform:uppercase;letter-spacing:1px'>Items Ordered</span><p style='color:#5C5C5C;font-size:14px;margin-top:4px'>" +
       items +
       "</p></div>" +
       '<div style="display:flex;gap:12px">' +
-      '<button class="modal-action" data-action="accept" style="flex:1;padding:12px;background:linear-gradient(135deg,#FF6B00,#FF8C00);color:#0A0A0F;border:none;border-radius:6px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:1px;cursor:pointer">Accept Order</button>' +
+      '<button class="modal-action" data-action="accept" style="flex:1;padding:12px;background:linear-gradient(135deg,#C9A84C,#D4B96A);color:#FAFAF5;border:none;border-radius:6px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:1px;cursor:pointer">Accept Order</button>' +
       '<button class="modal-action" data-action="reject" style="flex:1;padding:12px;background:transparent;color:#E74C3C;border:1px solid #E74C3C;border-radius:6px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:1px;cursor:pointer">Reject</button>' +
       "</div>";
 
@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var toast = document.createElement("div");
       toast.textContent = msg;
       toast.style.cssText =
-        "position:fixed;bottom:30px;right:30px;background:#111118;border:1px solid rgba(255,107,0,0.3);color:#F5F0E8;padding:16px 24px;border-radius:12px;font-size:14px;z-index:2000;box-shadow:0 10px 40px rgba(0,0,0,0.5);animation:fadeInUp 0.3s ease";
+        "position:fixed;bottom:30px;right:30px;background:#FAFAF5;border:1px solid rgba(200,168,76,0.3);color:#2C2C2C;padding:16px 24px;border-radius:12px;font-size:14px;z-index:2000;box-shadow:0 10px 40px rgba(0,0,0,0.1);animation:fadeInUp 0.3s ease";
       document.body.appendChild(toast);
       setTimeout(function () {
         toast.style.opacity = "0";
@@ -321,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var toast = document.createElement("div");
       toast.textContent = title + ": " + amount;
       toast.style.cssText =
-        "position:fixed;bottom:30px;right:30px;background:linear-gradient(135deg,#FF6B00,#E65C00);color:#0A0A0F;padding:16px 24px;border-radius:12px;font-size:14px;font-weight:600;z-index:2000;box-shadow:0 10px 40px rgba(0,0,0,0.5);animation:fadeInUp 0.3s ease";
+        "position:fixed;bottom:30px;right:30px;background:linear-gradient(135deg,#C9A84C,#D4B96A);color:#FAFAF5;padding:16px 24px;border-radius:12px;font-size:14px;font-weight:600;z-index:2000;box-shadow:0 10px 40px rgba(0,0,0,0.1);animation:fadeInUp 0.3s ease";
       document.body.appendChild(toast);
       setTimeout(function () {
         toast.style.opacity = "0";
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var toast = document.createElement("div");
       toast.textContent = name + " - " + orders + " total orders";
       toast.style.cssText =
-        "position:fixed;bottom:30px;right:30px;background:#111118;border:1px solid rgba(255,107,0,0.3);color:#F5F0E8;padding:16px 24px;border-radius:12px;font-size:14px;z-index:2000;box-shadow:0 10px 40px rgba(0,0,0,0.5);animation:fadeInUp 0.3s ease";
+        "position:fixed;bottom:30px;right:30px;background:#FAFAF5;border:1px solid rgba(200,168,76,0.3);color:#2C2C2C;padding:16px 24px;border-radius:12px;font-size:14px;z-index:2000;box-shadow:0 10px 40px rgba(0,0,0,0.1);animation:fadeInUp 0.3s ease";
       document.body.appendChild(toast);
       setTimeout(function () {
         toast.style.opacity = "0";
@@ -405,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   console.log(
-    "%c GRILL PARK ADMIN ",
-    "background:#FF6B00;color:#0A0A0F;font-size:16px;font-weight:bold;padding:8px 16px;border-radius:4px"
+    "%c HVK ADMIN ",
+    "background:#C9A84C;color:#FAFAF5;font-size:16px;font-weight:bold;padding:8px 16px;border-radius:4px"
   );
 });

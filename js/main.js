@@ -1,6 +1,6 @@
 /* ============================================
-   GRILL PARK - Main JavaScript
-   Premium Restaurant Website
+   HOUSE OF VENU KRISHNA - Main JavaScript
+   Premium Vegetarian Restaurant Website
    ============================================ */
 
 "use strict";
@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       var email = this.querySelector('input[type="email"]');
       if (email && email.value) {
-        alert("Thank you for subscribing to Grill Park! Stay tuned for exclusive offers.");
+        alert("Thank you for subscribing to House of Venu Krishna! Stay tuned for exclusive offers.");
         email.value = "";
       }
     });
@@ -407,6 +407,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  console.log("%c GRILL PARK 🍽️ ", "background:#FF6B00;color:#0A0A0F;font-size:18px;font-weight:bold;padding:10px 20px;border-radius:4px;font-family:Playfair Display,serif");
-  console.log("%c Premium Restaurant Website | Tiruppur", "color:#B8B0A0;font-size:12px");
+  console.log("%c HVK 🥘 ", "background:#C9A84C;color:#FAFAF5;font-size:18px;font-weight:bold;padding:10px 20px;border-radius:4px;font-family:Playfair Display,serif");
+  console.log("%c House of Venu Krishna | Sowcarpet, Chennai", "color:#5C5C5C;font-size:12px");
 });
